@@ -1,5 +1,6 @@
 # Marketing Optimizer for Blue Field Agency
-Marketing Optimizer for the use of Blue Field Agency was prepared in the form of an interactive Jupyter Notebook designed to optimize marketing spendings using MMM with Linear regression method, Logistic regression method and Random Forest model. Marketeer can choose between two KPIs to optimize: 
+## Objective
+This Marketing Optimizer is designed for Blue Field Agency in the form of an interactive Jupyter Notebook to optimize marketing campaign spendings using MMM with Linear regression method, Logistic regression method and Random Forest model. Marketeer can choose between two KPIs to optimize: 
 1. number of engaged sessions generated,
 2. conversion.
 
@@ -20,19 +21,15 @@ The Python script that contains the core functions and algorithms that execute t
 This Python script contains a detailed documentation describing each function.
 
 ## Prerequisites
-Text file **libraries list** contains required libraries. Most of the libraries used are not installed on the system by default. Hence, they need to be installed beforehand.
 
-### Installing:
-This can be done by copy-pasting this cell:
+### Installation:
+Required libraries for this model are provided in the text file **libraries_list.txt**
+To install required packages, the following code will be used:
 ```
 pip install library_name
 ```
-and replacing library_name with the corresponding name of the library.
+you can replace "library_name" with the needed library.
 
-On the example of *sklearn* library, copy-paste this cell:
-```
-pip install scikit-learn
-```
 
 ## User input
 The table below summarizes the user input required by **marketing_opt_report.ipynb**.
