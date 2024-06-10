@@ -19,11 +19,8 @@ The Python script that contains the core functions and algorithms that execute t
 
 This Python script contains a detailed documentation describing each function.
 
-### test_dataset.csv:
-an artificially generated data set mimicking the original data from RESET BV. Insert the pathname to this csv in the parameter cell of **marketing_opt_report.ipynb**.
-
 ## Prerequisites
-Text file **libraries.txt** contains required libraries. Most of the libraries used are not installed on the system by default. Hence, they need to be installed beforehand.
+Text file **libraries list** contains required libraries. Most of the libraries used are not installed on the system by default. Hence, they need to be installed beforehand.
 
 ### Installing:
 This can be done by copy-pasting this cell:
