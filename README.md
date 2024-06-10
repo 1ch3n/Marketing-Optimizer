@@ -4,6 +4,7 @@ This Marketing Optimizer is designed for Blue Field Agency in the form of an int
 1. number of engaged sessions generated,
 2. conversion.
 
+## Model
 The repository contains the following files:
 
 ### marketing_opt_report.ipynb:    
@@ -36,7 +37,7 @@ The table below summarizes the user input required by **marketing_opt_report.ipy
 
 | Parameter | Data type | Description |
 | :---:     | :---:     | :---:       |
-| KPI to optimize |	String	| Choice of KPI that is optimized: number of sessions (sessions_reset) or total revenue (totalRevenue_reset) |
+| KPI to optimize |	String	| Choice of KPI that is optimized: number of Engaeged sessions (EngagedSessions_reset) or conversions (conversions_reset) |
 | Minimal attribution |	Float |	Percentage of the total budget that needs to be allocated to each of the RESET campaigns |
 | Total allocation budget	| Float	| Monetary value that is assigned to today’s marketing allocation mix |
 | Pathname to dataset	| String	| Pathname to the dataset containing historical data |
