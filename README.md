@@ -13,12 +13,10 @@ The interactive Jupyter Notebook that works as the user interface reading **auto
 
 ### auto_report_read_file.py:      
 The Python script that contains the core functions and algorithms that execute the MMM analysis and data visualization. Core functions include:
-- **build_model_elastic_net** (applies data transformation to capture adstock and saturation effects, builds the Elastic Net regression model),
-- **hyperparameter_optimizer** (applies the Nevergrad algorithm that searches for the set of hyperparameters that minimizes model's MAPE),
-- **eval_charts** (creates data visualization based on the predicted KPIs: the most efficient budget allocation mix by ROI, contribution and funnel chart),
-- **perform_optimization** (defines bounds and contraints of the optimization problem; returns an interactive bar chart with budget allocation recommendation),
+- **build_model** (builds the OLS and random forest regressor if KPI = 'engagedSessions', builds logistic regression and random forest classifier if KPI='conversions')
+- **hyperparameter_optimizer** (applies the Nevergrad algorithm that searches for the set of hyperparameters that minimizes model's MSE),
+- **eval_charts** (creates data visualization based on the predicted KPIs: the most efficient budget allocation bar chart based on coefficents of OLS, and partial dependence for random forest models),
 - **marketing_optimizer** (links together the above-mentioned functions; takes user-defined parameters as an input).
-
 This Python script contains a detailed documentation describing each function.
 
 ## Prerequisites
