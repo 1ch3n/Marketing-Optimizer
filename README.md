@@ -1,15 +1,14 @@
 # Marketing Optimizer for Blue Field Agency
 ## Objective
-This Marketing Optimizer is designed for Blue Field Agency in the form of an interactive Jupyter Notebook to optimize marketing campaign spendings using MMM with Linear regression method, Logistic regression method and Random Forest model. Marketeer can choose between two KPIs to optimize: 
+This Marketing Optimizer is designed for Blue Field Agency in the form of an interactive Jupyter Notebook to optimize marketing campaign spendings using MMM with Linear regression method, Logistic regression method and Random Forest Algorithm. Marketeer can choose between two KPIs to optimize: 
 1. number of engaged sessions generated,
 2. conversion.
 
 ## Model
 The repository contains the following files:
 
-### marketing_opt_report.ipynb:    
-The interactive Jupyter Notebook that works as the user interface reading **auto_report_read_file.py**. The system generates a series of graphs and visualizations to aid marketeers in understanding the performance of different marketing campaigns. Minimizing the user input was prioritized. Besides running the non-modifiable cells, the end-user needs to adjust the user-defined parameters: specify KPI to optimize, the minimal budget attribution and total budget constraints, provide the pathname to the dataset, and determine the binary values for dummy variables (Dutch sports event and Dutch holiday and major music festival event). 
-
+### marketing_opt_report.ipynb:  
+The interactive Jupyter Notebook functions as the user interface reading the file **auto_report_read_file.py**. It automatically generates various graphs and visualizations to assist marketers in comprehending the effectiveness of 3 different marketing campaigns. Emphasis was placed on reducing user input. In order to use the optimizer, end-users are required to input specific parameters due to the requirement: specify KPI to optimize, the minimal budget attribution each campaign and total budget, provide the pathname to the dataset, and determine date of Dutch sports event and Dutch holiday and major music festival event. 
 
 ### auto_report_read_file.py:      
 The Python script that contains the core functions and algorithms that execute the MMM analysis and data visualization. Core functions include:
