@@ -38,8 +38,11 @@ The table below summarizes the user input required by **marketing_opt_report.ipy
 
 | Parameter | Data type | Description |
 | :---:     | :---:     | :---:       |
-| KPI 	String	| Choice of KPI that is optimized: number of Engaeged sessions (engagedSessions_reset) or conversions (conversions_reset) |
-| budget	| Float	| Monetary value that is assigned to today’s marketing allocation mix |
 | pathname | String	| Pathname to the dataset containing historical data |
 | target_date_sports | String	| Specifies the date has important Dutch sports event in 'YYYY-MM-DD' format |
 | target_date_festival | String	| Specifies the date has Dutch holiday and/or a major music festival in 'YYYY-MM-DD' format |
+| KPI |	String	| Choice of KPI that is optimized: number of Engaeged sessions (engagedSessions_reset) or conversions (conversions_reset) |
+| budget	| Float	| Monetary value that is assigned to today’s marketing allocation mix |
+| min_ShoppingReset	| Float	| Minimum budget allocation for campaign ShoppingReset |
+| min_ResetSearch	| Float	| Minimum budget allocation for campaign ResetSearch |
+| min_ResetAfterDrinkSearch	| Float	| Minimum budget allocation for campaign ResetAfterDrinkSearch |
