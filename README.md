@@ -13,9 +13,12 @@ The interactive Jupyter Notebook that works as the user interface reading **auto
 
 ### auto_report_read_file.py:      
 The Python script that contains the core functions and algorithms that execute the MMM analysis and data visualization. Core functions include:
-- **build_model** (builds the OLS and random forest regressor if KPI = 'engagedSessions', builds logistic regression and random forest classifier if KPI='conversions')
-- **hyperparameter_optimizer** (applies the Nevergrad algorithm that searches for the set of hyperparameters that minimizes model's MSE),
-- **eval_charts** (creates data visualization based on the predicted KPIs: the most efficient budget allocation bar chart based on coefficents of OLS, and partial dependence for random forest models),
+- **data_reader** (read the provided pathname and exlude the data before first peak),
+- **set_dummy_for_date** (sets specific date into dummy variables 1),
+- **build_model_ols_rf** (builds the OLS and random forest regressor if KPI = 'engagedSessions_reset',
+                         at the same time apply RandomizedSearchCV for hyperparameter fine tuning, and provide budget allocation advice at the end),
+- **build_model_lr_rf** (builds logistic regression and random forest classifier if KPI='conversions_reset'
+                         at the same time apply RandomizedSearchCV for hyperparameter fine tuning, and provide budget allocation advice at the end),
 - **marketing_optimizer** (links together the above-mentioned functions; takes user-defined parameters as an input).
 This Python script contains a detailed documentation describing each function.
 
@@ -35,9 +38,8 @@ The table below summarizes the user input required by **marketing_opt_report.ipy
 
 | Parameter | Data type | Description |
 | :---:     | :---:     | :---:       |
-| KPI to optimize |	String	| Choice of KPI that is optimized: number of Engaeged sessions (EngagedSessions_reset) or conversions (conversions_reset) |
-| Minimal attribution |	Float |	Percentage of the total budget that needs to be allocated to each of the RESET campaigns |
-| Total allocation budget	| Float	| Monetary value that is assigned to today’s marketing allocation mix |
-| Pathname to dataset	| String	| Pathname to the dataset containing historical data |
-|All-important Dutch  sports event (dummy)	| Binary	| Specifies whether today is an important Dutch sports event or not |
-|Dutch holiday and biggest music festivals (dummy)	| Binary	| Specifies whether today is Dutch holiday and/or a major music festival |
+| KPI 	String	| Choice of KPI that is optimized: number of Engaeged sessions (engagedSessions_reset) or conversions (conversions_reset) |
+| budget	| Float	| Monetary value that is assigned to today’s marketing allocation mix |
+| pathname | String	| Pathname to the dataset containing historical data |
+| target_date_sports | String	| Specifies the date has important Dutch sports event in 'YYYY-MM-DD' format |
+| target_date_festival | String	| Specifies the date has Dutch holiday and/or a major music festival in 'YYYY-MM-DD' format |
